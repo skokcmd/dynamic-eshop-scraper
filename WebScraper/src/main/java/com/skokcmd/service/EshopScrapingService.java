@@ -52,6 +52,7 @@ public class EshopScrapingService implements IWebScrapingService<Product, Scrapi
             // load more button loading
             loadProductPages(htmlElement, request.getLoadMoreButtonClassName());
         } catch (InterruptedException e) {
+            logger.error("Error during the initial load!", e);
             throw new RuntimeException(e);
         }
     }
