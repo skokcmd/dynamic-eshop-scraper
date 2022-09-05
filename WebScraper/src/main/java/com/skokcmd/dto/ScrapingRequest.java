@@ -11,6 +11,7 @@ import lombok.*;
 public class ScrapingRequest {
 
     private String url;
+    private String acceptCookiesClassName;
     private String productClassName;
     private String imageSrcAttribute;
     private String titleClassName;
