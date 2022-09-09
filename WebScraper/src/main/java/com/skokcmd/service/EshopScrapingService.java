@@ -65,7 +65,7 @@ public class EshopScrapingService implements IWebScrapingService<Product, Scrapi
      * @throws InterruptedException
      */
     private void loadProductPages(WebElement htmlElement, String loadMoreButtonClassName) throws InterruptedException {
-        if (loadMoreButtonClassName.isEmpty() || loadMoreButtonClassName == null) {
+        if (loadMoreButtonClassName.isEmpty()) {
             return;
         }
         // check if element with the className exists
@@ -136,9 +136,9 @@ public class EshopScrapingService implements IWebScrapingService<Product, Scrapi
     }
 
     private String getTextForElementByClassNameOrByTag(WebElement item, String className, String htmlTag) {
-        if (!className.isEmpty() && className != null) {
+        if (!className.isEmpty()) {
             return item.findElement(By.className(className)).getText().trim();
-        } else if (!htmlTag.isEmpty() && htmlTag != null) {
+        } else if (!htmlTag.isEmpty()) {
             return item.findElement(By.tagName(htmlTag)).getText().trim();
         }
 
