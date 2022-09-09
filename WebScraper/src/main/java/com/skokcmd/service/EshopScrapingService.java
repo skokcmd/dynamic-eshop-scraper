@@ -83,7 +83,7 @@ public class EshopScrapingService implements IWebScrapingService<Product, Scrapi
      * @throws InterruptedException
      */
     private void triggerBtnClickForClassName(String btnClassName) throws InterruptedException {
-        if (btnClassName.isEmpty() || btnClassName == null) {
+        if (btnClassName.isEmpty()) {
             return;
         }
         if (!this.driver.findElements(By.className(btnClassName)).isEmpty()) {
